@@ -1,0 +1,328 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Plus Jakarta Sans', Arial, sans-serif;
+    background-color: #fcfaf4;
+    color: #3c2f2f;
+    line-height: 1.6;
+}
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* TOP RUNNING BAR */
+.top-banner {
+    background-color: #1a1515;
+    color: #dfd5c6;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* NAVBAR TINH TẾ */
+.navbar {
+    background-color: #fcfaf4;
+    border-bottom: 1px solid #ede7dc;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+.nav-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-left, .nav-right {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+.nav-container a {
+    text-decoration: none;
+    color: #3c2f2f;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+.nav-container a:hover {
+    color: #a08144;
+}
+.navbar .logo {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: #a08144;
+}
+.navbar .logo span {
+    font-size: 1.6rem;
+    display: block;
+}
+.navbar .logo small {
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    color: #777;
+}
+
+.hero {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1608248597481-496100c8c836?q=80&w=1200') no-repeat center center/cover;
+    padding: 140px 20px;
+    text-align: center;
+    color: white;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 21, 21, 0.65);
+    z-index: 1;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero h1 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.hero .slogan {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #dfd5c6;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.hero .description {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 35px;
+    font-weight: 300;
+}
+.btn-hero {
+    display: inline-block;
+    background-color: #a08144;
+    color: white;
+    padding: 14px 45px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+.btn-hero:hover {
+    background-color: #fcfaf4;
+    color: #1a1515;
+    transform: translateY(-2px);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.section-title h2 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #1a1515;
+    font-weight: 500;
+}
+.section-title .line {
+    width: 50px;
+    height: 2px;
+    background-color: #a08144;
+    margin: 15px auto 0;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #ede7dc;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(58, 47, 47, 0.08);
+    border-color: #a08144;
+}
+
+.img-box {
+    background-color: #fbf9f1;
+    padding: 30px 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.img-box img {
+    max-height: 220px;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+.product-card:hover .img-box img {
+    transform: scale(1.06);
+}
+
+.product-info h3 {
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 1.25rem;
+    color: #1a1515;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.product-info .price {
+    font-size: 1.05rem;
+    color: #a08144;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background: transparent;
+    border: 1px solid #1a1515;
+    color: #1a1515;
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+.btn-buy:hover {
+    background: #1a1515;
+    color: #fcfaf4;
+}
+
+.admin-wrapper {
+    background-color: #f3efe6;
+    padding: 50px;
+    border-radius: 4px;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+.form-group.full-width {
+    grid-column: span 2;
+}
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #5a4b4b;
+}
+.form-group input, .form-group textarea {
+    padding: 12px;
+    background: #fcfaf4;
+    border: 1px solid #ede7dc;
+    outline: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #a08144;
+}
+.btn-submit {
+    grid-column: span 2;
+    background-color: #1a1515;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    background-color: #a08144;
+}
+
+footer {
+    background-color: #1a1515;
+    color: #dfd5c6;
+    padding: 50px 20px;
+    text-align: center;
+}
+footer h3 {
+    text-transform: uppercase;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    letter-spacing: 3px;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.slogan-foot {
+    font-style: italic;
+    color: #a08144;
+    margin: 10px 0 20px;
+}
+.dtu {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+.copyright {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    border-top: 1px solid #2d2525;
+    padding-top: 20px;
+    opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+    .hero-container, .form-grid {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    .form-group.full-width, .btn-submit {
+        grid-column: span 1;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .nav-left, .nav-right {
+        gap: 15px;
+    }
+}
